@@ -1,0 +1,19 @@
+import React from 'react';
+import Header from '../components/Header/Header';
+
+import Sidebar from './Sidebar/Sidebar';
+
+function DefaultLayout({ children }) {
+    return (
+        <div>
+            <Header />
+            <div className="container">
+                <Sidebar />
+                <div className="content">{children}</div>
+            </div>
+        </div>
+        // Layout mặc định , children ở đây là các pages
+    );
+}
+
+export default DefaultLayout;
