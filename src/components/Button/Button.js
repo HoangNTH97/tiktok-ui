@@ -17,6 +17,7 @@ function Button({
     text = false,
     getApp = false,
     login = false,
+    className,
     leftIcon,
     rightIcon,
     onClick,
@@ -41,6 +42,7 @@ function Button({
     // nếu có các thuộc tính này thì nó sẽ tự động chuyển thành thẻ tương ứng
 
     const classes = cx('wrapper', {
+        [className]: className,
         primary,
         outline,
         text,
@@ -51,9 +53,9 @@ function Button({
 
     return (
         <Comp className={classes} {...props}>
-            {leftIcon && <span className={cx('left-icon')}>{leftIcon}</span>}
+            {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
             <span className={cx('title')}>{children}</span>
-            {rightIcon && <span className={cx('right-icon')}>{rightIcon}</span>}
+            {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
         </Comp>
     );
 }
