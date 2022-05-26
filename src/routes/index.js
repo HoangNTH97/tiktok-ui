@@ -12,7 +12,7 @@ import Upload from '../pages/Upload/Upload';
 const publicRoutes = [
     { path: '/', component: Home },
     { path: '/following', component: Following },
-    { path: '/profile', component: Profile },
+    { path: '/@:nickname', component: Profile },
     { path: '/upload', component: Upload, layout: HeaderOnly },
     { path: '/search', component: Search, layout: null },
 ]; // đây là những router không cần đăng nhập vẫn xem dc

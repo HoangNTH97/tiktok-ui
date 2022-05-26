@@ -30,8 +30,13 @@ function Button({
     }; // tạo 1 cái props để sử dụng nội bộ, ta truyền các props ở ngoài vào và truyền prop xuống dưới (...props)
 
     if (disabled) {
-        delete props.onClick; // khi nút bị disable thì sẽ không click được nữa
+        Object.keys(props).forEach((key) => {
+            if (key.startsWith('on') && typeof props[key] === 'function') {
+                delete props[key];
+            }
+        });
     }
+
     if (to) {
         props.to = to;
         Comp = Link; // nếu xài to ở đây sẽ là Link nội bộ nên sẽ chuyển đến các trang nội bộ

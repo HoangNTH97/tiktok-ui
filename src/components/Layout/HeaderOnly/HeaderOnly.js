@@ -10,7 +10,6 @@ function HeaderOnly({ children }) {
             </div>
         </div>
     );
-    // Layout cho các page đặc biệt children nhận được ở đây chính là các page đặc biệt
 }
 
 export default HeaderOnly;
