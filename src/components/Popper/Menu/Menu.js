@@ -11,7 +11,7 @@ const cx = classNames.bind(styles);
 
 const defaultFn = () => {};
 
-function Menu({ children, items = [], onChange = defaultFn }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
@@ -38,9 +38,10 @@ function Menu({ children, items = [], onChange = defaultFn }) {
     return (
         <Tippy
             interactive
-            delay={[0, 700]}
-            offset={[12, 8]}
+            delay={[0, 500]}
+            offset={[12, 8]} // căn chỉnh vị trí
             placement="bottom-end" // vị trí của tippy
+            hideOnClick={hideOnClick} // Không ẩn đi khi click vào avatar
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
                     <PopperWrapper className={cx('menu-popper')}>

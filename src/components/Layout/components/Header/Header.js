@@ -1,9 +1,12 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tippy from '@tippyjs/react';
 import classNames from 'classnames/bind';
-import React from 'react';
 import 'tippy.js/dist/tippy.css'; // optional
+
+import routesConfig from '../../../../config/routes';
 import image from '../../../../assets/images/index';
 import Button from '../../../Button/Button';
 import {
@@ -97,9 +100,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
+                <Link to={routesConfig.home} className={cx('logo')}>
                     <img src={image.logo} alt="" />
-                </div>
+                </Link>
                 <Search />
                 <div className={cx('action')}>
                     {currentUser ? (
