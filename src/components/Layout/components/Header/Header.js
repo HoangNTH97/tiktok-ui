@@ -24,6 +24,7 @@ import {
 import Image from '../../../Image/Image';
 import Menu from '../../../Popper/Menu/Menu';
 import Search from '../Search/Search';
+import avatar from '../../../../assets/images/iconAvatar2.jpg';
 
 import styles from './Header.module.scss';
 
@@ -61,7 +62,7 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    const currentUser = true; // Biến này dùng để check nếu có curren-user thì sẽ render current-user nếu không có thì sẽ render trạng thái chưa đăng nhập
+    const currentUser = false; // Biến này dùng để check nếu có curren-user thì sẽ render current-user nếu không có thì sẽ render trạng thái chưa đăng nhập
 
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
@@ -132,11 +133,7 @@ function Header() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <Image
-                                className={cx('user-avatar')}
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/521fd1462b9bcdd9f8723613f65af3e8~c5_100x100.jpeg?x-expires=1653465600&x-signature=zPpKM0Tpj%2BV5Ag64JevkhDceeC4%3D"
-                                alt="PNT"
-                            />
+                            <Image className={cx('user-avatar')} src={avatar} alt="PNT" />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
