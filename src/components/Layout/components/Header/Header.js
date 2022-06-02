@@ -62,7 +62,7 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    const currentUser = false; // Biến này dùng để check nếu có curren-user thì sẽ render current-user nếu không có thì sẽ render trạng thái chưa đăng nhập
+    const currentUser = true; // Biến này dùng để check nếu có curren-user thì sẽ render current-user nếu không có thì sẽ render trạng thái chưa đăng nhập
 
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
