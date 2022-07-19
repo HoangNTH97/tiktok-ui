@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TippyHeadless from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 
-import * as searchSevices from '../../../../apiServices/searchSevices';
+import * as searchSevices from '../../../../services/searchSevice';
 import AccountItem from '../../../AccountItem/AccountItem';
 import { SearchIcon } from '../../../icons/icons';
 import { useDebounce } from '../../../../hooks';

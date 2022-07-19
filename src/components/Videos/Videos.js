@@ -1,7 +1,7 @@
 import React from 'react';
 import video from '../../assets/ExteriorNight.mp4';
 
-function Videos(props) {
+function Videos() {
     return (
         <div>
             <video className="day" autoPlay muted loop>

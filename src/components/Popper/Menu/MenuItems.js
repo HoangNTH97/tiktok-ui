@@ -6,8 +6,6 @@ import Button from '../../Button/Button';
 
 const cx = classNames.bind(styles);
 
-MenuItems.propTypes = {};
-
 function MenuItems({ data, onClick }) {
     const classes = cx('menu-item', { separate: data.separate });
     return (

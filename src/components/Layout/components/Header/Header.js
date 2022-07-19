@@ -6,7 +6,7 @@ import Tippy from '@tippyjs/react';
 import classNames from 'classnames/bind';
 import 'tippy.js/dist/tippy.css'; // optional
 
-import routesConfig from '../../../../config/routes';
+import config from '../../../../config';
 import image from '../../../../assets/images/index';
 import Button from '../../../Button/Button';
 import {
@@ -62,7 +62,7 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    const currentUser = true; // Biến này dùng để check nếu có curren-user thì sẽ render current-user nếu không có thì sẽ render trạng thái chưa đăng nhập
+    const currentUser = false; // Biến này dùng để check nếu có curren-user thì sẽ render current-user nếu không có thì sẽ render trạng thái chưa đăng nhập
 
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
@@ -101,7 +101,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo')}>
+                <Link to={config.routes.home} className={cx('logo')}>
                     <img src={image.logo} alt="" />
                 </Link>
                 <Search />

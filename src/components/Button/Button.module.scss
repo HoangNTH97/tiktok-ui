@@ -37,6 +37,9 @@
     padding: 9px 16px;
     color: var(--white);
     background-color: var(--primary);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
@@ -51,6 +54,9 @@
     line-height: 22px;
     min-width: 88px;
     min-height: 28px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         background-color: rgba(254, 44, 85, 0.06);
@@ -74,6 +80,9 @@
     min-width: 90px;
     height: 32px;
     line-height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         border-color: rgba(22, 24, 35, 0.2);
@@ -89,6 +98,9 @@
     font-size: 1.8rem;
     line-height: 25px;
     font-weight: 600;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         background-color: rgba(254, 44, 85, 0.06);

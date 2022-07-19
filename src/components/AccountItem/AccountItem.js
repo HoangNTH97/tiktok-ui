@@ -2,13 +2,17 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+
 import Image from '../Image/Image';
 import styles from './AccountItem.modile.scss';
 
 const cx = classNames.bind(styles);
 
-AccountItem.propTypes = {};
+AccountItem.propTypes = {
+    data: PropTypes.object,
+};
 
 function AccountItem({ data }) {
     return (

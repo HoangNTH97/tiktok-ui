@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames/bind';
 import styles from './Button.module.scss';
@@ -5,7 +6,21 @@ import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-Button.propTypes = {};
+Button.propTypes = {
+    children: PropTypes.node.isRequired, // trường hợp không truyền children thì sẽ báo lỗi
+    to: PropTypes.string,
+    href: PropTypes.string,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    disabled: PropTypes.bool,
+    text: PropTypes.bool,
+    getApp: PropTypes.bool,
+    login: PropTypes.bool,
+    className: PropTypes.string,
+    leftIcon: PropTypes.node, // nếu truyền leftIcon thì sẽ add thêm 1 cái class icon vào
+    rightIcon: PropTypes.node, // nếu truyền rightIcon thì sẽ add thêm 1 cái class icon vào
+    onClick: PropTypes.func,
+};
 
 function Button({
     to,
